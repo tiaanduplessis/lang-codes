@@ -1,11 +1,9 @@
 import find from '../'
 
 test('should find matching languages', () => {
-  const result = find('zul')
-
   expect(find).toBeDefined()
-  expect(result).toBeDefined()
-  expect(result.name).toBe('Zulu')
+  expect(find('zul').name).toBe('Zulu')
+  expect(find('en').name).toBe('English')
 })
 
 test('should return all if no query specified', () => {
